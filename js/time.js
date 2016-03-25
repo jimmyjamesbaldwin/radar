@@ -33,7 +33,7 @@ function pageLoadTimer(){
 
         minutes = (parseInt(totalSeconds/60));
         if (minutes === 0) {
-            minutesLabel.innerHTML = 'Just now';
+            minutesLabel.innerHTML = 'just now';
         } else if (minutes === 1) {
             minutesLabel.innerHTML = '1 minute ago';
         } else {
