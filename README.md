@@ -1,1 +1,1 @@
-# RADAR. A room availability display for BU Computing
+# RADAR. A room availability display for BU Computing.
