@@ -9,6 +9,6 @@ wget https://bootstrap.pypa.io/get-pip.py
 chmod +x get-pip.py
 python get-pip.py
 rm get-pip.py
-pip install Flask flask_sqlalchemy flask_table flask-script boto boto3 python-digitalocean
+pip install Flask flask_sqlalchemy flask-script
 echo ''
 echo '*** dependency install complete ***'
