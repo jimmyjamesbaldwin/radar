@@ -11,6 +11,10 @@ class Room(db.Model):
     def get_all():
         return Room.query.all()
 
+    @staticmethod
+    def get_by_room_number(room_number):
+        return Room.query.filter_by(room_number=room_number).first()
+
 
 class Timetable(db.Model):
     __tablename__ = 'tbl_timetable'
