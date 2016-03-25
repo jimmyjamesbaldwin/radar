@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Poole House Active Floor Plan</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,7 +12,6 @@
         <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="../../static/js/time.js"></script>
         <script src="../../static/js/vendor/bootstrap.min.js"></script>
-        <script src="../../static/js/main.js"></script>
 
         <script>
         $( document ).ready(function() {
@@ -24,23 +23,30 @@
         </script>
 
         <script>
-        function mapCalculation(){
-        var jsonInput = '{{ room_data|safe }}';
-        var jsonParsed = $.parseJSON(jsonInput);
+            function mapCalculation(){
+            var jsonInput = '{{ room_data|safe }}'; //Injection
+            var jsonParsed = $.parseJSON(jsonInput);
 
-        $.each(jsonParsed, function() {
-            var currentRoom = '#' + this['room_number'];
-            var currentRoomLabel = currentRoom + '-label';
-            if(this['availability'] === false){
-                $(currentRoom).css({ fill: "#A81C07"});
-                $(currentRoomLabel).css('color', 'white'); //TODO fix text colour
-            } else {
-                $(currentRoom).css({ fill: "#77DD77"});
-            }
-        });
-    }
+            $.each(jsonParsed, function() {
+                var currentRoom = '#' + this['room_number'];
+                var currentRoomLabel = currentRoom + '-label';
+                var availability = this['available'];
 
-    </script>
+                if(availability === true){
+                    //Room available
+                    $(currentRoom).css({ fill: "#A81C07"});
+                    $(currentRoomLabel).css('color', 'white'); //TODO fix text colour
+                } else if (availability === false) {
+                    //Room unavailable
+                    $(currentRoom).css({ fill: "#77DD77"});
+                } else {
+                    //Unknown
+                    $(currentRoom).css({ fill: "grey"});
+                }
+            });
+        }
+
+        </script>
     </head>
 
     <body>
@@ -48,7 +54,7 @@
 
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h1>Poole House - Floor 2</h1>
+                    <h1>Poole House - Second Floor</h1>
                     <h2>Current Time: <span id="time"></span></h2>
                     <h4>Last updated <span id="minutes">just now</span> <span style="display:none;" id="seconds">Less than 1</span></h4>
 
@@ -63,14 +69,13 @@
                         	 y="0px" width="1024px" height="768px" viewBox="0 0 1024 768" style="enable-background:new 0 0 1024 768;" xml:space="preserve">
                             <style type="text/css">
                             	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
-                            	.st1{font-family:'MyriadPro-Regular';}
                             	.st2{font-size:21px;}
                             </style>
                             <rect id="BuildingFrame" x="197.2" y="130.8" class="st0" width="644.8" height="490.8"/>
                             <rect id="PG07" x="197.2" y="473.9" class="st0" width="105.7" height="147.7"/>
-                            <rect id="PG06" x="303" y="473.9" class="st0" width="105.7" height="147.7"/>
+                            <rect id="PG04" x="303" y="473.9" class="st0" width="105.7" height="147.7"/>
                             <text id="PG07-label" transform="matrix(1 0 0 1 228.2644 559.2533)" class="st1 st2">PG07</text>
-                            <text id="PG06-label" transform="matrix(1 0 0 1 333.1726 559.2534)" class="st1 st2">PG06</text>
+                            <text id="PG04-label" transform="matrix(1 0 0 1 333.1726 559.2534)" class="st1 st2">PG04</text>
                             <rect id="PG07_1_" x="280.3" y="130.8" class="st0" width="178.5" height="73.9"/>
                             <rect id="PG07_2_" x="280.3" y="204.7" class="st0" width="178.5" height="73.9"/>
                             <text transform="matrix(1 0 0 1 345.7128 246.5809)" class="st1 st2">PG</text>
