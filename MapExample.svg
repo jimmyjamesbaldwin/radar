@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ground_Floor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="1024px" height="768px" viewBox="0 0 1024 768" style="enable-background:new 0 0 1024 768;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st1{font-family:'MyriadPro-Regular';}
+	.st2{font-size:21px;}
+</style>
+<rect id="BuildingFrame" x="197.2" y="130.8" class="st0" width="644.8" height="490.8"/>
+<rect id="PG07" x="197.2" y="473.9" class="st0" width="105.7" height="147.7"/>
+<rect id="PG06" x="303" y="473.9" class="st0" width="105.7" height="147.7"/>
+<text id="PG07-label" transform="matrix(1 0 0 1 228.2644 559.2533)" class="st1 st2">PG07</text>
+<text id="PG06-label" transform="matrix(1 0 0 1 333.1726 559.2534)" class="st1 st2">PG06</text>
+<rect id="PG07_1_" x="280.3" y="130.8" class="st0" width="178.5" height="73.9"/>
+<rect id="PG07_2_" x="280.3" y="204.7" class="st0" width="178.5" height="73.9"/>
+<text transform="matrix(1 0 0 1 345.7128 246.5809)" class="st1 st2">PG</text>
+<text transform="matrix(1 0 0 1 345.7126 176.2189)" class="st1 st2">PG</text>
+</svg>
