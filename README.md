@@ -3,7 +3,6 @@ RADAR
 
 Room Availability Detection and Reconnaissance.  
 A room availability display for BU Computing.
------------------------------------------------
 
 Intro
 -----
