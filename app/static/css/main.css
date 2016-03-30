@@ -31,6 +31,82 @@ h2, h4{
     height: 100%;
 }
 
-svg{
-    height: 80%;
-}
+/* Large Devices, Wide Screens */
+ @media only screen and (max-width : 4000px) {
+     .room-availability-heading{
+         text-align: right;
+     }
+
+     h3, h4{
+         text-align: center;
+     }
+
+     svg{
+         height: 80%;
+     }
+ }
+
+ /* Medium Devices, Desktops */
+ @media only screen and (max-width : 992px) {
+     h3{
+         font-size: 24px;
+     }
+
+     .bu-logo{
+         margin-top: 15px;
+         width: 250px;
+         margin-left: auto;
+         margin-right: auto;
+         display: block;
+     }
+
+     .room-availability-heading{
+         text-align: center;
+     }
+
+     svg{
+         width: 100%;
+     }
+ }
+
+ /* Small Devices, Tablets */
+ @media only screen and (max-width : 768px) {
+     h3{
+         font-size: 20px;
+     }
+
+     .bu-logo{
+         width: 200px;
+     }
+
+     .room-availability-heading{
+         font-size: 25px;
+     }
+
+     svg{
+         height: 100%;
+     }
+ }
+
+ /* Extra Small Devices, Phones */
+ @media only screen and (max-width : 480px) {
+
+     h3, h4{
+         font-size: 15px;
+         text-align: right;
+     }
+
+     .bu-logo{
+         width: 200px;
+     }
+
+     .room-availability-heading{
+         text-align: center;
+     }
+
+     svg{
+         padding-top: 20px;
+         width: 100%;
+         height: auto;
+    }
+ }
