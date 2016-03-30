@@ -1,4 +1,36 @@
+/*BU Font*/
+@font-face {
+    font-family: glypha;
+    src: url(../fonts/glypha75black.ttf);
+}
+
+.container{
+    width: 100%;
+}
+
 /*SVG Label fonts*/
-.st2{
-    font-family:sans-serif;
+.st2, h1, h5, p{
+    font-family:glypha;
+}
+
+h2, h4{
+    font-family: sans-serif;
+}
+
+.top-row{
+    padding: 0px 10px 0px 10px;
+    border-bottom: thick solid #28303a;
+}
+
+.bu-logo{
+    width: 70%;
+}
+
+.map-area{
+    background-color: #f2f2f2;
+    height: 100%;
+}
+
+svg{
+    height: 80%;
 }
