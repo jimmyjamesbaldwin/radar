@@ -9,14 +9,40 @@ def apply_caching(response):
     response.headers["Server"] = ""
     return response
 
-@app.route('/rooms')
+# ------------------------
+# view controller routes
+# ------------------------
+@app.route('/')
+@app.route('/index')
 def rooms():
-	return render_template('map.html', room_data=json.dumps(data_handler.query_rooms())) 
+	try:
+		room_data = json.dumps(data_handler.query_rooms())
+	except Exception as e:
+		return server_error(e)
+		
+	return render_template('map.html', room_data=json.dumps(data_handler.query_rooms()))
 
-@app.route('/api/')
+# ------------------------
+# api routes
+# ------------------------
+@app.route('/api')
 def return_welcome():
     return '{"message": "welcome to the api. please read the documentation for usage"}'
 
-@app.route('/api/rooms/')
+@app.route('/api/rooms')
 def api_rooms():
-	return json.dumps(data_handler.query_rooms())
+	try:
+		return json.dumps(data_handler.query_rooms())
+	except Exception as e:
+		return '{"error": ' + e + '}'
+
+# ------------------------
+# error handling
+# ------------------------
+@app.errorhandler(404)
+def server_error(e):
+	return render_template('404.html'), 404
+
+@app.errorhandler(500)
+def server_error(e):
+	return render_template('500.html'), 500
