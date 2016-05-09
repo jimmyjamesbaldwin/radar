@@ -33,7 +33,7 @@ python ./manage.py runserver
 
 Requirements
 ------------
-The app should run on any machine with python. The dependency install script (app/deploy/install.sh) should handle everything.
+The app should run on any machine with Python 2.7. The dependency install script (app/deploy/install.sh) should handle everything. Python 3 support is detailed in [issue 1](https://github.com/BU-Computing/radar/issues/1)
 
 Contributors
 ------------
